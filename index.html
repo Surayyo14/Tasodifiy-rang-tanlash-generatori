@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasodifiy rang generatori</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        #rangniTanla {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <button id="rangniTanla" onclick="rangniOzgartir()">Tasodifiy rangni tanlang</button>
+
+    <script>
+        function tasodifiyRaqam() {
+            return Math.floor(Math.random() * 256);
+        }
+
+        function tasodifiyRang() {
+            let r = tasodifiyRaqam();
+            let g = tasodifiyRaqam();
+            let b = tasodifiyRaqam();
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        function rangniOzgartir() {
+            let yangiRang = tasodifiyRang();
+            document.body.style.backgroundColor = yangiRang;
+        }
+    </script>
+</body>
+</html>
+
